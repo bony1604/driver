@@ -1,71 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bony Jasa Driver Bogor</title>
+<meta name="description" content="Bony Jasa Driver Bogor menyediakan jasa pengemudi untuk perjalanan dalam dan luar kota, keluarga dan bisnis.">
+<title>Bony Jasa Driver Bogor | Driver Pribadi</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#222}
-header{background:#102c46;color:white;padding:35px 20px;text-align:center}
-header h1{font-size:30px;margin:0 0 10px}
-header p{margin:0}
-nav{background:#173e5e;padding:14px;text-align:center}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-.hero{padding:55px 20px;text-align:center;background:white}
-.hero h2{font-size:27px;color:#173e5e}
-.hero p{line-height:1.7}
-.btn{display:inline-block;background:#16864b;color:white;padding:14px 22px;border-radius:7px;text-decoration:none;margin-top:15px}
-section{padding:30px 20px;max-width:850px;margin:auto}
-h2{color:#173e5e}
-.services{background:white;padding:20px;border-radius:10px;margin-bottom:15px}
-footer{background:#102c46;color:white;text-align:center;padding:25px}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#263342;background:#f5f7fa}
+header{background:#10283f;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#e5bd68}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{background:linear-gradient(120deg,#10283f,#24516c);color:white;text-align:center;padding:85px 20px}
+.hero h1{font-size:38px;margin:0 0 15px}
+.hero h1 span{color:#e5bd68}
+.hero p{max-width:600px;margin:15px auto;line-height:1.8;color:#e1e9ef}
+.btn{display:inline-block;background:#d9ad54;color:#142b40;text-decoration:none;padding:15px 25px;border-radius:6px;font-weight:bold;margin-top:18px}
+section{padding:55px 7%;text-align:center}
+.section-title{font-size:28px;color:#153650;margin-bottom:12px}
+.sub{color:#71808d;line-height:1.7;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:left}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 18px #142b4010}
+.card h3{color:#173d58}
+.card p{color:#71808d;line-height:1.7;font-size:14px}
+.icon{font-size:30px}
+.about{background:#eaf0f4}
+.about p{max-width:750px;margin:auto;line-height:1.9;color:#566675}
+.contact{background:#10283f;color:white}
+.contact h2{color:white}
+.contact p{line-height:1.8;color:#dce5eb}
+.contact .btn{margin:10px}
+footer{background:#091c2d;color:#c5d0d9;text-align:center;padding:25px;font-size:13px}
+@media(max-width:600px){
+header{justify-content:center;gap:15px}
+nav a{margin:0 7px;font-size:13px}
+.hero{padding:65px 18px}
+.hero h1{font-size:29px}
+section{padding:42px 18px}
+}
 </style>
 </head>
 <body>
 
 <header>
-<h1>BONY JASA DRIVER BOGOR</h1>
-<p>Layanan Pengemudi Profesional dan Terpercaya</p>
-</header>
-
+<div class="logo">BONY <span>DRIVER</span></div>
 <nav>
 <a href="#layanan">Layanan</a>
-<a href="#tentang">Tentang Kami</a>
+<a href="#tentang">Tentang</a>
 <a href="#kontak">Kontak</a>
 </nav>
+</header>
 
 <div class="hero">
-<h2>Perjalanan Aman dan Nyaman Bersama Kami</h2>
-<p>Melayani kebutuhan driver pribadi untuk perjalanan dalam kota, luar kota, keluarga, bisnis dan berbagai keperluan lainnya.</p>
-<a class="btn" href="https://wa.me/6289635620165">PESAN DRIVER VIA WHATSAPP</a>
+<h1>Perjalanan Nyaman<br>Bersama <span>Bony Driver</span></h1>
+<p>Layanan jasa pengemudi untuk perjalanan pribadi, keluarga, bisnis, dalam kota maupun luar kota. Anda berkendara dengan nyaman, kami yang mengemudikan.</p>
+<a class="btn" href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20menanyakan%20jasa%20driver.">PESAN DRIVER SEKARANG</a>
 </div>
 
 <section id="layanan">
-<h2>Layanan Kami</h2>
-<div class="services">
+<h2 class="section-title">Layanan Kami</h2>
+<p class="sub">Solusi pengemudi sesuai kebutuhan perjalanan Anda.</p>
+<div class="cards">
+<div class="card">
+<div class="icon">🚘</div>
 <h3>Driver Dalam Kota</h3>
-<p>Layanan pengemudi untuk aktivitas dan perjalanan di dalam kota.</p>
+<p>Pengemudi untuk aktivitas harian, urusan pekerjaan, keluarga dan perjalanan di wilayah Bogor serta sekitarnya.</p>
 </div>
-<div class="services">
+<div class="card">
+<div class="icon">🛣️</div>
 <h3>Driver Luar Kota</h3>
-<p>Perjalanan antar kota, wisata, keluarga dan perjalanan bisnis.</p>
+<p>Melayani perjalanan antar kota, wisata, mudik dan perjalanan keluarga.</p>
 </div>
-<div class="services">
+<div class="card">
+<div class="icon">🕒</div>
 <h3>Driver Harian</h3>
-<p>Layanan pengemudi sesuai kebutuhan dan kesepakatan.</p>
+<p>Pengemudi sesuai durasi dan kebutuhan perjalanan berdasarkan kesepakatan.</p>
+</div>
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Perjalanan Pribadi & Bisnis</h3>
+<p>Layanan pengemudi untuk berbagai kebutuhan pribadi, keluarga maupun pekerjaan.</p>
+</div>
 </div>
 </section>
 
-<section id="tentang">
-<h2>Tentang Kami</h2>
-<p>Bony Jasa Driver Bogor menyediakan layanan pengemudi dengan mengutamakan keselamatan, kenyamanan dan ketepatan waktu. Kami melayani kendaraan milik pelanggan.</p>
+<section class="about" id="tentang">
+<h2 class="section-title">Tentang Bony Driver</h2>
+<p>Bony Jasa Driver Bogor hadir untuk membantu kebutuhan perjalanan Anda dengan mengutamakan keselamatan, kenyamanan dan ketepatan waktu. Layanan kami menggunakan kendaraan milik pelanggan. Tarif dan durasi perjalanan dapat dikomunikasikan terlebih dahulu sebelum pemesanan.</p>
 </section>
 
-<section id="kontak">
-<h2>Hubungi Kami</h2>
+<section id="kontak" class="contact">
+<h2>Butuh Jasa Driver?</h2>
+<p>Hubungi kami untuk informasi layanan, ketersediaan jadwal dan penawaran harga.</p>
+<a class="btn" href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20booking%20driver.">CHAT WHATSAPP</a>
 <p>WhatsApp: 089635620165</p>
-<a class="btn" href="https://wa.me/6289635620165">Hubungi Sekarang</a>
+<p>Bogor dan sekitarnya</p>
 </section>
 
 <footer>
