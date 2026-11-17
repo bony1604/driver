@@ -4,104 +4,337 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bony Jasa Driver Bogor menyediakan jasa pengemudi untuk perjalanan dalam dan luar kota, keluarga dan bisnis.">
-<title>Bony Jasa Driver Bogor | Driver Pribadi</title>
+<meta name="description" content="Bony Jasa Driver Bogor. Layanan driver profesional menggunakan mobil milik pelanggan. Melayani Bogor dan sekitarnya.">
+<meta name="theme-color" content="#0b1928">
+<title>Bony Jasa Driver | Bogor</title>
+
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;color:#263342;background:#f5f7fa}
-header{background:#10283f;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:20px;font-weight:bold;letter-spacing:1px}
-.logo span{color:#e5bd68}
-nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{background:linear-gradient(120deg,#10283f,#24516c);color:white;text-align:center;padding:85px 20px}
-.hero h1{font-size:38px;margin:0 0 15px}
-.hero h1 span{color:#e5bd68}
-.hero p{max-width:600px;margin:15px auto;line-height:1.8;color:#e1e9ef}
-.btn{display:inline-block;background:#d9ad54;color:#142b40;text-decoration:none;padding:15px 25px;border-radius:6px;font-weight:bold;margin-top:18px}
-section{padding:55px 7%;text-align:center}
-.section-title{font-size:28px;color:#153650;margin-bottom:12px}
-.sub{color:#71808d;line-height:1.7;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:left}
-.card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 18px #142b4010}
-.card h3{color:#173d58}
-.card p{color:#71808d;line-height:1.7;font-size:14px}
-.icon{font-size:30px}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:#f5f7fa;
+ color:#263747;
+ line-height:1.6;
+}
+header{
+ background:#0b1928;
+ color:white;
+ padding:18px 7%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
+ gap:12px;
+ border-bottom:1px solid #c49a45;
+}
+.logo{
+ font-size:22px;
+ font-weight:800;
+ letter-spacing:1px;
+}
+.logo span{color:#e6bd68}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{
+ color:white;
+ text-decoration:none;
+ font-size:13px;
+ font-weight:bold;
+}
+nav a:hover{color:#e6bd68}
+
+.hero{
+ background:
+ linear-gradient(120deg,rgba(5,17,30,.97),rgba(17,48,69,.88)),
+ linear-gradient(45deg,#10283f,#294c63);
+ color:white;
+ text-align:center;
+ padding:90px 20px 85px;
+ position:relative;
+ overflow:hidden;
+}
+.hero:before{
+ content:"";
+ position:absolute;
+ width:280px;height:280px;
+ border:1px solid rgba(230,189,104,.2);
+ border-radius:50%;
+ top:-140px;right:-70px;
+}
+.hero:after{
+ content:"";
+ position:absolute;
+ width:220px;height:220px;
+ border:1px solid rgba(230,189,104,.15);
+ border-radius:50%;
+ bottom:-130px;left:-60px;
+}
+.eyebrow{
+ color:#e6bd68;
+ letter-spacing:3px;
+ font-size:12px;
+ font-weight:bold;
+ margin-bottom:17px;
+}
+.hero h1{
+ font-size:clamp(34px,6vw,55px);
+ line-height:1.15;
+ margin-bottom:14px;
+}
+.hero h1 span{color:#e6bd68}
+.hero h2{
+ font-size:19px;
+ color:#d9e2e9;
+ font-weight:normal;
+ margin-bottom:18px;
+}
+.hero p{
+ max-width:650px;
+ margin:0 auto 30px;
+ color:#d1dce5;
+ font-size:15px;
+}
+.actions{
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-wrap:wrap;
+ gap:13px;
+}
+.btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ padding:15px 24px;
+ border-radius:8px;
+ text-decoration:none;
+ font-weight:bold;
+ font-size:14px;
+ transition:.25s;
+}
+.btn:hover{transform:translateY(-3px)}
+.whatsapp{
+ background:#20c96b;
+ color:#fff;
+ box-shadow:0 7px 22px rgba(32,201,107,.25);
+}
+.whatsapp:hover{background:#13ad59}
+.gold{
+ background:#e6bd68;
+ color:#14283a;
+}
+.outline{
+ border:1px solid #e6bd68;
+ color:#e6bd68;
+}
+section{padding:60px 7%;text-align:center}
+.section-title{
+ color:#142e43;
+ font-size:29px;
+ margin-bottom:10px;
+}
+.subtitle{
+ color:#71808d;
+ max-width:650px;
+ margin:0 auto 30px;
+ font-size:14px;
+}
+.features{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:18px;
+ margin-top:30px;
+ text-align:left;
+}
+.card{
+ background:#fff;
+ padding:26px 22px;
+ border-radius:12px;
+ box-shadow:0 5px 22px rgba(15,39,58,.07);
+ border:1px solid #edf0f3;
+}
+.card .icon{font-size:31px;margin-bottom:12px}
+.card h3{color:#173a54;margin-bottom:9px;font-size:17px}
+.card p{color:#71808d;font-size:13px}
 .about{background:#eaf0f4}
-.about p{max-width:750px;margin:auto;line-height:1.9;color:#566675}
-.contact{background:#10283f;color:white}
-.contact h2{color:white}
-.contact p{line-height:1.8;color:#dce5eb}
-.contact .btn{margin:10px}
-footer{background:#091c2d;color:#c5d0d9;text-align:center;padding:25px;font-size:13px}
+.about-content{
+ max-width:760px;
+ margin:auto;
+}
+.about-content p{color:#657583;margin-top:12px}
+.partner{
+ background:#10283f;
+ color:white;
+}
+.partner .section-title{color:#e6bd68}
+.partner .subtitle{color:#d1dce5}
+.partner-box{
+ background:#fff;
+ color:#263747;
+ max-width:700px;
+ margin:25px auto;
+ padding:28px;
+ border-radius:12px;
+ text-align:left;
+}
+.partner-box p{margin:8px 0;font-size:14px}
+.contact{background:#fff}
+.contact-number{
+ color:#173a54;
+ font-size:21px;
+ font-weight:bold;
+ margin:15px 0;
+}
+footer{
+ background:#081522;
+ color:#b9c6d1;
+ text-align:center;
+ padding:27px 15px;
+ font-size:12px;
+}
+footer strong{color:#e6bd68}
 @media(max-width:600px){
-header{justify-content:center;gap:15px}
-nav a{margin:0 7px;font-size:13px}
-.hero{padding:65px 18px}
-.hero h1{font-size:29px}
-section{padding:42px 18px}
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center;gap:15px}
+ .hero{padding:70px 18px}
+ .hero h2{font-size:17px}
+ section{padding:48px 18px}
+ .section-title{font-size:25px}
+ .btn{width:100%;max-width:310px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">BONY <span>DRIVER</span></div>
-<nav>
-<a href="#layanan">Layanan</a>
-<a href="#tentang">Tentang</a>
-<a href="#kontak">Kontak</a>
-</nav>
+ <div class="logo">BONY <span>DRIVER</span></div>
+ <nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#layanan">Layanan</a>
+  <a href="#mitra">Mitra</a>
+  <a href="#kontak">Kontak</a>
+ </nav>
 </header>
 
-<div class="hero">
-<h1>Perjalanan Nyaman<br>Bersama <span>Bony Driver</span></h1>
-<p>Layanan jasa pengemudi untuk perjalanan pribadi, keluarga, bisnis, dalam kota maupun luar kota. Anda berkendara dengan nyaman, kami yang mengemudikan.</p>
-<a class="btn" href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20menanyakan%20jasa%20driver.">PESAN DRIVER SEKARANG</a>
+<main>
+<div class="hero" id="beranda">
+ <div class="eyebrow">BOGOR & SEKITARNYA</div>
+ <h1>BONY JASA <span>DRIVER</span></h1>
+ <h2>Perjalanan Nyaman, Driver Terpercaya</h2>
+ <p>
+  Solusi layanan pengemudi profesional untuk perjalanan pribadi,
+  keluarga dan pekerjaan. Kami menghubungkan Anda dengan driver
+  yang siap mengemudikan mobil milik Anda.
+ </p>
+
+ <div class="actions">
+  <a class="btn whatsapp"
+  href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20memesan%20jasa%20driver."
+  target="_blank" rel="noopener">
+   <span>●</span> PESAN DRIVER VIA WHATSAPP
+  </a>
+
+  <a class="btn outline" href="#mitra">
+   BERGABUNG MENJADI MITRA
+  </a>
+ </div>
 </div>
 
 <section id="layanan">
-<h2 class="section-title">Layanan Kami</h2>
-<p class="sub">Solusi pengemudi sesuai kebutuhan perjalanan Anda.</p>
-<div class="cards">
-<div class="card">
-<div class="icon">🚘</div>
-<h3>Driver Dalam Kota</h3>
-<p>Pengemudi untuk aktivitas harian, urusan pekerjaan, keluarga dan perjalanan di wilayah Bogor serta sekitarnya.</p>
-</div>
-<div class="card">
-<div class="icon">🛣️</div>
-<h3>Driver Luar Kota</h3>
-<p>Melayani perjalanan antar kota, wisata, mudik dan perjalanan keluarga.</p>
-</div>
-<div class="card">
-<div class="icon">🕒</div>
-<h3>Driver Harian</h3>
-<p>Pengemudi sesuai durasi dan kebutuhan perjalanan berdasarkan kesepakatan.</p>
-</div>
-<div class="card">
-<div class="icon">🤝</div>
-<h3>Perjalanan Pribadi & Bisnis</h3>
-<p>Layanan pengemudi untuk berbagai kebutuhan pribadi, keluarga maupun pekerjaan.</p>
-</div>
-</div>
+ <h2 class="section-title">Layanan Kami</h2>
+ <p class="subtitle">
+  Satu pintu pemesanan untuk berbagai kebutuhan perjalanan Anda.
+ </p>
+
+ <div class="features">
+  <div class="card">
+   <div class="icon">🚘</div>
+   <h3>Driver Dalam Kota</h3>
+   <p>Pengemudi untuk aktivitas harian, urusan pekerjaan dan kebutuhan keluarga.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🛣️</div>
+   <h3>Driver Luar Kota</h3>
+   <p>Melayani perjalanan antar kota, wisata, mudik dan perjalanan keluarga.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🕒</div>
+   <h3>Driver Harian</h3>
+   <p>Layanan pengemudi berdasarkan durasi dan kebutuhan sesuai kesepakatan.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🤝</div>
+   <h3>Driver Keluarga & Bisnis</h3>
+   <p>Pengemudi untuk kebutuhan pribadi, keluarga maupun kegiatan pekerjaan.</p>
+  </div>
+ </div>
 </section>
 
-<section class="about" id="tentang">
-<h2 class="section-title">Tentang Bony Driver</h2>
-<p>Bony Jasa Driver Bogor hadir untuk membantu kebutuhan perjalanan Anda dengan mengutamakan keselamatan, kenyamanan dan ketepatan waktu. Layanan kami menggunakan kendaraan milik pelanggan. Tarif dan durasi perjalanan dapat dikomunikasikan terlebih dahulu sebelum pemesanan.</p>
+<section class="about">
+ <div class="about-content">
+  <h2 class="section-title">Tentang Bony Jasa Driver</h2>
+  <p>
+   Bony Jasa Driver merupakan layanan pengemudi yang berpusat di
+   Bogor dan sekitarnya.
+  </p>
+  <p>
+   Kami mengutamakan keselamatan, kejujuran, tanggung jawab
+   dan ketepatan waktu. Pemesanan dikelola melalui satu kontak
+   pusat dan dapat dilayani oleh Bony maupun mitra driver yang tersedia.
+  </p>
+  <p><strong>Menggunakan mobil milik pelanggan.</strong></p>
+ </div>
 </section>
 
-<section id="kontak" class="contact">
-<h2>Butuh Jasa Driver?</h2>
-<p>Hubungi kami untuk informasi layanan, ketersediaan jadwal dan penawaran harga.</p>
-<a class="btn" href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20booking%20driver.">CHAT WHATSAPP</a>
-<p>WhatsApp: 089635620165</p>
-<p>Bogor dan sekitarnya</p>
+<section class="partner" id="mitra">
+ <h2 class="section-title">Mari Bergabung Menjadi Mitra Driver</h2>
+ <p class="subtitle">
+  Punya pengalaman mengemudi? Mari membangun jaringan layanan
+  driver bersama Bony Jasa Driver.
+ </p>
+
+ <div class="partner-box">
+  <h3>Persyaratan Mitra</h3>
+  <p>✓ Memiliki SIM A yang masih berlaku.</p>
+  <p>✓ Berpengalaman mengemudi.</p>
+  <p>✓ Memahami wilayah operasional.</p>
+  <p>✓ Jujur, disiplin dan bertanggung jawab.</p>
+  <p>✓ Bersedia mengemudikan mobil milik pelanggan.</p>
+  <hr style="margin:18px 0;border:0;border-top:1px solid #e5e9ed">
+  <h3>Sistem Kemitraan</h3>
+  <p>✓ Pesanan dikoordinasikan melalui kontak pusat.</p>
+  <p>✓ Mitra menerima tawaran pekerjaan sesuai ketersediaan.</p>
+  <p>✓ Ketentuan administrasi disampaikan sebelum pekerjaan disepakati.</p>
+ </div>
+
+ <a class="btn whatsapp"
+ href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20berminat%20bergabung%20menjadi%20mitra%20driver.%20Mohon%20informasinya."
+ target="_blank" rel="noopener">
+  DAFTAR MITRA VIA WHATSAPP
+ </a>
 </section>
+
+<section class="contact" id="kontak">
+ <h2 class="section-title">Butuh Jasa Driver?</h2>
+ <p class="subtitle">
+  Hubungi kami untuk informasi layanan dan pemesanan driver.
+ </p>
+ <div class="contact-number">0896 3562 0165</div>
+ <a class="btn whatsapp"
+ href="https://wa.me/6289635620165?text=Halo%20Bony,%20saya%20ingin%20bertanya%20tentang%20layanan%20driver."
+ target="_blank" rel="noopener">
+  <span>●</span> HUBUNGI WHATSAPP KAMI
+ </a>
+ <p style="margin-top:20px;color:#71808d;font-size:13px">
+  Bogor dan sekitarnya
+ </p>
+</section>
+</main>
 
 <footer>
-<p>© 2026 Bony Jasa Driver Bogor</p>
-<p>Melayani dengan amanah dan profesional.</p>
+ <p>© 2026 <strong>BONY JASA DRIVER</strong></p>
+ <p>Jaringan Mitra Driver | Amanah • Profesional • Terpercaya</p>
 </footer>
 
 </body>
