@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BONY JASA DRIVER | Sopir Mengemudikan Mobil Milik Pelanggan Bogor</title>
-    <meta name="description" content="BONY JASA DRIVER menyediakan jasa driver mengemudikan mobil milik pelanggan untuk dalam kota, luar kota, harian serta kebutuhan keluarga & bisnis di Kota Bogor dan sekitarnya. Bergabunglah menjadi mitra driver kami!">
+    <title>BONY JASA DRIVER | Sopir Mengemudikan Mobil Milik Pelanggan Bogor</title>
+    <meta name="description" content="BONY JASA DRIVER menyediakan jasa driver mengemudikan mobil milik pelanggan untuk dalam kota, luar kota, harian serta kebutuhan keluarga & bisnis di Kota Bogor dan sekitarnya. Bergabunglah menjadi mitra driver kami!">
     <meta name="keywords" content="jasa driver bogor, sopir bogor, driver mengemudikan mobil pelanggan, mitra driver bogor">
     <style>
         :root {
-            --bg-light: #fffaf0;
-            --gradient-light: linear-gradient(135deg,#fffaf0,#f7e8b8,#fffaf0);
-            --text-light: #222222;
-            --bg-dark: #0b0b0b;
-            --gradient-dark: linear-gradient(135deg,#0b0b0b,#2c2218,#0b0b0b);
-            --text-dark: #f1f1f1;
-            --emas: #d4af37;
+            --bg-light: #f8f4e8;
+            --gradient-light: linear-gradient(135deg,#f8f4e8,#e9d8a6,#f8f4e8);
+            --text-light: #1f1f1f;
+            --bg-dark: #080808;
+            --gradient-dark: linear-gradient(135deg,#080808,#1f1812,#080808);
+            --text-dark: #e8e8e8;
+            --emas: #c9a227;
             --wa: #25d366;
         }
 
@@ -28,7 +28,7 @@
         body {
             background: var(--gradient-light);
             color: var(--text-light);
-            transition: background 0.3s, color 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
 
         body.dark-mode {
@@ -46,19 +46,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 15px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
-            background-color: rgba(255,250,240,0.92);
+            background-color: rgba(248,244,232,0.94);
         }
 
         body.dark-mode nav {
-            background-color: rgba(11,11,11,0.92);
+            background-color: rgba(8,8,8,0.94);
         }
 
         .toggle-btn {
-            padding: 8px 14px;
+            padding: 8px 14px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -68,7 +68,7 @@
         .hero {
             position: relative;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px 120px;
             overflow: hidden;
         }
 
@@ -78,19 +78,19 @@
         }
 
         .hero h1 {
-            font-size: clamp(28px, 5vw, 48px);
+            font-size: clamp(28px, 5vw, 48px);
             margin-bottom: 20px;
         }
 
         .hero p {
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 30px;
             line-height: 1.6;
         }
 
         .cta-group a {
             display: inline-block;
-            padding: 14px 28px;
+            padding: 14px 28px;
             border-radius: 8px;
             text-decoration: none;
             margin: 8px;
@@ -104,32 +104,32 @@
         }
 
         .section {
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: clamp(24px, 4vw, 36px);
+            font-size: clamp(24px, 4vw, 36px);
             margin-bottom: 12px;
         }
 
         .section-desc {
             text-align: center;
             max-width: 850px;
-            margin: 0 auto 40px;
+            margin: 0 auto 40px;
             line-height: 1.6;
         }
 
         .about-box {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             align-items: center;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .about-box {
                 grid-template-columns: 1fr;
             }
@@ -138,65 +138,90 @@
         .about-img img {
             width: 100%;
             border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(212,175,55,0.15);
+            box-shadow: 0 4px 12px rgba(201,162,39,0.15);
+            object-fit: cover;
+            min-height: 220px;
+            background-color: rgba(201,162,39,0.08);
         }
 
         body.dark-mode .about-img img {
-            box-shadow: 0 4px 12px rgba(212,175,55,0.25);
+            box-shadow: 0 4px 12px rgba(201,162,39,0.25);
         }
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 24px;
         }
 
         .card {
             padding: 24px;
             border-radius: 16px;
-            background: rgba(255,250,240,0.85);
-            border: 1px solid rgba(212,175,55,0.25);
+            background: rgba(248,244,232,0.85);
+            border: 1px solid rgba(201,162,39,0.25);
             transition: 0.3s;
         }
 
         body.dark-mode .card {
-            background: rgba(44,34,24,0.85);
-            border: 1px solid rgba(212,175,55,0.25);
+            background: rgba(31,24,18,0.85);
+            border: 1px solid rgba(201,162,39,0.25);
+        }
+
+        ul {
+            padding-left: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .note-box {
+            max-width: 800px;
+            margin: 30px auto 0;
+            padding: 20px;
+            border-radius: 16px;
+            background: rgba(201,162,39,0.08);
+            border: 1px solid rgba(201,162,39,0.25);
+            line-height: 1.7;
+        }
+
+        body.dark-mode .note-box {
+            background: rgba(31,24,18,0.9);
+            border: 1px solid rgba(201,162,39,0.25);
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #0b0b0b;
+            background-color: #080808;
             color: var(--emas);
         }
     </style>
 </head>
 <body>
     <nav class="container">
-        <strong>🚕 BONY JASA DRIVER</strong>
-        <button class="toggle-btn" id="darkToggle">🌙 Mode Gelap</button>
+        <strong>🚕 BONY JASA DRIVER</strong>
+        <button class="toggle-btn" id="darkToggle">🌙 Mode Gelap</button>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <h1>BONY JASA DRIVER</h1>
+            <h1>BONY JASA DRIVER</h1>
             <p>Kami menyediakan jasa pengemudi mengendarakan mobil milik pelanggan untuk berbagai kebutuhan di Bogor dan sekitarnya</p>
             <div class="cta-group">
-                <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">📞 Hubungi WA 0896‑3562‑0165</a>
+                <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">📞 Hubungi WA 0896-3562-0165</a>
             </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Tentang BONY JASA DRIVER</h2>
+            <h2 class="section-title">Tentang BONY JASA DRIVER</h2>
             <div class="about-box">
                 <div class="about-img">
-                    <img src="foto‑bony.jpg" alt="Bony ‑ Bony Jasa Driver">
+                    <img src="foto-bony.jpg" alt="Bony - Bony Jasa Driver" loading="lazy">
                 </div>
                 <div class="about-text">
-                    <p>Selamat datang ke BONY JASA DRIVER. Kami berfokus pada jasa pengemudi mengendarakan mobil milik pelanggan untuk berbagai keperluan seperti dalam kota, luar kota, harian serta kebutuhan keluarga maupun bisnis. Kami juga menerima pendaftaran mitra‑mitra driver yang ingin bergabung bersama kami untuk mendapatkan pelanggan tambahan melalui website ini dan pencarian Google.</p>
+                    <p>Selamat datang ke BONY JASA DRIVER. Kami berfokus pada jasa pengemudi mengendarakan mobil milik pelanggan untuk berbagai keperluan seperti dalam kota, luar kota, harian serta kebutuhan keluarga maupun bisnis. Kami juga menerima pendaftaran mitra-mitra driver yang ingin bergabung bersama kami untuk mendapatkan pelanggan tambahan melalui website ini dan pencarian Google.</p>
                 </div>
             </div>
         </div>
@@ -204,22 +229,22 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Jenis Layanan Kami</h2>
+            <h2 class="section-title">Jenis Layanan Kami</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3>🏙️ Dalam Kota</h3>
-                    <p>Melayani pengemudian mobil pelanggan di wilayah Kota Bogor</p>
+                    <h3>🏙️ Dalam Kota</h3>
+                    <p>Melayani pengemudian mobil pelanggan di wilayah Kota Bogor</p>
                 </div>
                 <div class="card">
-                    <h3>🛣️ Luar Kota</h3>
+                    <h3>🛣️ Luar Kota</h3>
                     <p>Melayani perjalanan ke luar kota sesuai kesepakatan</p>
                 </div>
                 <div class="card">
-                    <h3>🕒 Sistem Harian</h3>
+                    <h3>🕒 Sistem Harian</h3>
                     <p>Pengemudi siap melayani selama satu hari penuh</p>
                 </div>
                 <div class="card">
-                    <h3>🤝 Keluarga & Bisnis</h3>
+                    <h3>🤝 Keluarga & Bisnis</h3>
                     <p>Untuk kebutuhan keluarga maupun kegiatan bisnis pelanggan</p>
                 </div>
             </div>
@@ -228,23 +253,39 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Mari Bergabung Menjadi Mitra Driver</h2>
-            <p class="section-desc">Daftarkan diri Anda sebagai mitra driver agar bisa ditemukan oleh pelanggan melalui pencarian Google</p>
-            <p><strong>Persyaratan Mitra Driver:</strong></p>
-            <ul style="padding‑left:20px;max‑width:800px;margin:0 auto;">
-                <li>✅ Memiliki SIM A yang masih berlaku</li>
-                <li>✅ Berpengalaman mengemudi</li>
-                <li>✅ Jujur, disiplin dan bertanggung jawab</li>
-                <li>✅ Bersedia diverifikasi sebelum diterima menjadi mitra</li>
+            <h2 class="section-title">Mari Bergabung Menjadi Mitra Driver</h2>
+            <p class="section-desc">Daftarkan diri Anda sebagai mitra driver agar bisa ditemukan oleh pelanggan melalui pencarian Google</p>
+            <p><strong>Persyaratan Mitra Driver:</strong></p>
+            <ul style="padding-left:20px;max-width:800px;margin:0 auto;">
+                <li>✅ Memiliki SIM A yang masih berlaku</li>
+                <li>✅ Berpengalaman mengemudi</li>
+                <li>✅ Jujur, disiplin dan bertanggung jawab</li>
+                <li>✅ Bersedia diverifikasi sebelum diterima menjadi mitra</li>
             </ul>
-            <div style="text‑align:center;margin‑top:30px;">
-                <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">Hubungi Kami Untuk Pendaftaran Mitra</a>
+            <div style="text-align:center;margin-top:30px;">
+                <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">Hubungi Kami Untuk Pendaftaran Mitra</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Ketentuan Pemesanan & Pembayaran DP 30%</h2>
+            <div class="note-box">
+                <p>Setelah harga layanan disepakati antara BONY JASA DRIVER dan pelanggan, diperlukan DP sebesar 30% dari kesepakatan harga untuk mengonfirmasi jadwal pemesanan.</p>
+                <br>
+                <p>✔️ <strong>Pembatalan jadwal oleh pelanggan:</strong> DP 30% hangus.</p>
+                <p>✔️ <strong>Pergeseran waktu / hari (maksimal 1×24 jam keberangkatan):</strong> DP 30% masih berlaku dan dapat digunakan untuk jadwal baru.</p>
+                <p>✔️ Untuk kisaran tarif harian, dalam kota, luar kota, acara keluarga serta bisnis silakan hubungi kami lewat WhatsApp guna mendapatkan penawaran harga yang akurat.</p>
+            </div>
+            <div style="text-align:center;margin-top:30px;">
+                <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">Hubungi Kami Untuk Pemesanan</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 BONY JASA DRIVER ‑ Semua Hak Dilindungi</p>
+        <p>© 2026 BONY JASA DRIVER - Semua Hak Dilindungi</p>
     </footer>
 
     <script>
@@ -252,15 +293,15 @@
         const body = document.body;
 
         if (localStorage.getItem("darkMode") === "true") {
-            body.classList.add("dark‑mode");
-            darkToggle.innerText = "☀️ Mode Terang";
+            body.classList.add("dark-mode");
+            darkToggle.innerText = "☀️ Mode Terang";
         }
 
         darkToggle.addEventListener("click", () => {
-            body.classList.toggle("dark‑mode");
-            const isDark = body.classList.contains("dark‑mode");
+            body.classList.toggle("dark-mode");
+            const isDark = body.classList.contains("dark-mode");
             localStorage.setItem("darkMode", isDark);
-            darkToggle.innerText = isDark ? "☀️ Mode Terang" : "🌙 Mode Gelap";
+            darkToggle.innerText = isDark ? "☀️ Mode Terang" : "🌙 Mode Gelap";
         });
     </script>
 </body>
