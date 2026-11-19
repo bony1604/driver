@@ -8,14 +8,17 @@
     <meta name="keywords" content="jasa driver bogor, sopir bogor, driver mengemudikan mobil pelanggan, mitra driver bogor">
     <style>
         :root {
-            --bg-light: #f8f4e8;
-            --gradient-light: linear-gradient(135deg,#f8f4e8,#e9d8a6,#f8f4e8);
+            --bg-light: #f5efe0;
+            --gradient-light: linear-gradient(135deg,#f5efe0,#d6b56a,#f5efe0);
             --text-light: #1f1f1f;
             --bg-dark: #080808;
             --gradient-dark: linear-gradient(135deg,#080808,#1f1812,#080808);
             --text-dark: #e8e8e8;
-            --emas: #c9a227;
-            --wa: #25d366;
+            --emas: #b8892a;
+            --emas-soft: rgba(184,137,42,0.18);
+            --wa: #007a33;
+            --wa-soft: rgba(0,122,51,0.15);
+            --coklat-ceklis: #8b5a2b;
         }
 
         * {
@@ -50,19 +53,23 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background-color: rgba(248,244,232,0.94);
+            background-color: rgba(245,239,224,0.95);
+            border-bottom: 1px solid var(--emas);
         }
 
         body.dark-mode nav {
-            background-color: rgba(8,8,8,0.94);
+            background-color: rgba(8,8,8,0.95);
+            border-bottom: 1px solid var(--emas);
         }
 
         .toggle-btn {
             padding: 8px 14px;
-            border: none;
+            border: 1px solid var(--emas);
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            background-color: var(--emas-soft);
+            color: inherit;
         }
 
         .hero {
@@ -80,6 +87,7 @@
         .hero h1 {
             font-size: clamp(28px, 5vw, 48px);
             margin-bottom: 20px;
+            color: var(--emas);
         }
 
         .hero p {
@@ -96,11 +104,13 @@
             margin: 8px;
             font-weight: bold;
             font-size: 17px;
+            color: #ffffff;
         }
 
         .cta-wa {
             background-color: var(--wa);
-            color: white;
+            color: #ffffff;
+            border: 2px solid var(--wa);
         }
 
         .section {
@@ -111,6 +121,7 @@
             text-align: center;
             font-size: clamp(24px, 4vw, 36px);
             margin-bottom: 12px;
+            color: var(--emas);
         }
 
         .section-desc {
@@ -127,6 +138,14 @@
             align-items: center;
             max-width: 900px;
             margin: 0 auto;
+            padding: 30px;
+            border: 1px solid var(--emas);
+            border-radius: 16px;
+            background-color: rgba(255,255,255,0.45);
+        }
+
+        body.dark-mode .about-box {
+            background-color: rgba(31,24,18,0.45);
         }
 
         @media (max-width: 768px) {
@@ -137,15 +156,15 @@
 
         .about-img img {
             width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(201,162,39,0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(184,137,42,0.2);
             object-fit: cover;
             min-height: 220px;
-            background-color: rgba(201,162,39,0.08);
+            background-color: var(--emas-soft);
         }
 
         body.dark-mode .about-img img {
-            box-shadow: 0 4px 12px rgba(201,162,39,0.25);
+            box-shadow: 0 4px 12px rgba(184,137,42,0.35);
         }
 
         .card-grid {
@@ -157,14 +176,19 @@
         .card {
             padding: 24px;
             border-radius: 16px;
-            background: rgba(248,244,232,0.85);
-            border: 1px solid rgba(201,162,39,0.25);
+            background-color: rgba(255,255,255,0.45);
+            border: 1px solid var(--emas);
             transition: 0.3s;
         }
 
         body.dark-mode .card {
-            background: rgba(31,24,18,0.85);
-            border: 1px solid rgba(201,162,39,0.25);
+            background-color: rgba(31,24,18,0.45);
+            border: 1px solid var(--emas);
+        }
+
+        .card h3 {
+            color: var(--emas);
+            margin-bottom: 12px;
         }
 
         ul {
@@ -174,19 +198,24 @@
             line-height: 1.7;
         }
 
+        ul li::marker {
+            color: var(--coklat-ceklis);
+            font-size: 18px;
+        }
+
         .note-box {
             max-width: 800px;
             margin: 30px auto 0;
-            padding: 20px;
+            padding: 24px;
             border-radius: 16px;
-            background: rgba(201,162,39,0.08);
-            border: 1px solid rgba(201,162,39,0.25);
+            background-color: rgba(255,255,255,0.45);
+            border: 1px solid var(--emas);
             line-height: 1.7;
         }
 
         body.dark-mode .note-box {
-            background: rgba(31,24,18,0.9);
-            border: 1px solid rgba(201,162,39,0.25);
+            background-color: rgba(31,24,18,0.45);
+            border: 1px solid var(--emas);
         }
 
         footer {
@@ -194,6 +223,7 @@
             padding: 20px;
             background-color: #080808;
             color: var(--emas);
+            border-top: 1px solid var(--emas);
         }
     </style>
 </head>
@@ -255,13 +285,15 @@
         <div class="container">
             <h2 class="section-title">Mari Bergabung Menjadi Mitra Driver</h2>
             <p class="section-desc">Daftarkan diri Anda sebagai mitra driver agar bisa ditemukan oleh pelanggan melalui pencarian Google</p>
-            <p><strong>Persyaratan Mitra Driver:</strong></p>
-            <ul style="padding-left:20px;max-width:800px;margin:0 auto;">
-                <li>✅ Memiliki SIM A yang masih berlaku</li>
-                <li>✅ Berpengalaman mengemudi</li>
-                <li>✅ Jujur, disiplin dan bertanggung jawab</li>
-                <li>✅ Bersedia diverifikasi sebelum diterima menjadi mitra</li>
-            </ul>
+            <div class="note-box">
+                <p><strong>Persyaratan Mitra Driver:</strong></p>
+                <ul>
+                    <li>Memiliki SIM A yang masih berlaku</li>
+                    <li>Berpengalaman mengemudi</li>
+                    <li>Jujur, disiplin dan bertanggung jawab</li>
+                    <li>Bersedia diverifikasi sebelum diterima menjadi mitra</li>
+                </ul>
+            </div>
             <div style="text-align:center;margin-top:30px;">
                 <a href="https://wa.me/6289635620165" target="_blank" class="cta-wa">Hubungi Kami Untuk Pendaftaran Mitra</a>
             </div>
@@ -274,8 +306,8 @@
             <div class="note-box">
                 <p>Setelah harga layanan disepakati antara BONY JASA DRIVER dan pelanggan, diperlukan DP sebesar 30% dari kesepakatan harga untuk mengonfirmasi jadwal pemesanan.</p>
                 <br>
-                <p>✔️ <strong>Pembatalan jadwal oleh pelanggan:</strong> DP 30% hangus.</p>
-                <p>✔️ <strong>Pergeseran waktu / hari (maksimal 1×24 jam keberangkatan):</strong> DP 30% masih berlaku dan dapat digunakan untuk jadwal baru.</p>
+                <p>✔️ Pembatalan jadwal oleh pelanggan: DP 30% hangus.</p>
+                <p>✔️ Pergeseran waktu / hari (maksimal 1×24 jam keberangkatan): DP 30% masih berlaku dan dapat digunakan untuk jadwal baru.</p>
                 <p>✔️ Untuk kisaran tarif harian, dalam kota, luar kota, acara keluarga serta bisnis silakan hubungi kami lewat WhatsApp guna mendapatkan penawaran harga yang akurat.</p>
             </div>
             <div style="text-align:center;margin-top:30px;">
